@@ -79,6 +79,7 @@ namespace WebRole1
                 PerformanceCounter memProcess = new PerformanceCounter("Memory", "Available MBytes");
                 Regex regex = new Regex(@"^[a-zA-Z ]+$");
                 file.ReadLine();
+                
                 while (!file.EndOfStream && memProcess.NextValue() > 40)
                 {
                     string temp = file.ReadLine();
